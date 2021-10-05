@@ -1,1 +1,51 @@
-<p>register works!</p>
+<div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">Register</div>
+
+      <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid" novalidate> 
+          <!-- if you wanted the alert to show the details then you can add the onRegisterSubmit() function with registerform.valid -->
+        <div class="form-container">
+          <mat-form-field>
+            <mat-icon matPrefix>face</mat-icon>
+            <input id="name"
+                   matInput
+                   formControlName="name"
+                   [(ngModel)]="user.name"
+                   placeholder="Enter your name" />
+            
+          </mat-form-field>
+  
+          <mat-form-field>
+              <input id="email"
+                     matInput
+                     formControlName="email"
+                     [(ngModel)]="user.email"
+                     placeholder="Enter your email" />
+                <mat-icon matPrefix>account_circle</mat-icon>
+            </mat-form-field>
+  
+          <mat-form-field>
+              <input id="password"
+                     matInput
+                     formControlName="password"
+                     [(ngModel)]="user.password"
+                     placeholder="Enter your password"
+                     [type]="hide ? 'password':'text'" />
+                <mat-icon matPrefix> vpn_key</mat-icon>
+                <mat-icon matSuffix (click)="hide = !hide">
+                  {{hide ? 'visibility' : 'visibility_off'}}
+                </mat-icon>
+            </mat-form-field>
+
+            <div style="text-align: right; margin-right: 10px;">
+                <p>Forgot Password ?</p>
+            </div>
+  
+            <button mat-button type="submit" 
+                    class="mat-raised-button mat-primary" 
+                    [disabled]="!registerForm.valid">Register</button>
+            <button mat-button routerLink="/login" class="divider">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>

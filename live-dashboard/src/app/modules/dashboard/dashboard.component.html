@@ -1,1 +1,79 @@
-<p>Dashboard Works</p>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="25">
+        <mat-form-field appearance="fill">
+            <mat-label>FLOOR</mat-label>
+            <mat-select>
+            <mat-option *ngFor="let floor of floors" [value]="floor.value">
+                {{floor.viewValue}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <mat-form-field appearance="fill">
+            <mat-label>SECTION</mat-label>
+            <mat-select>
+            <mat-option *ngFor="let section of sections" [value]="section.value">
+                {{section.viewValue}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <mat-form-field appearance="fill">
+            <mat-label>VIEW</mat-label>
+            <mat-select>
+            <mat-option *ngFor="let view of views" [value]="view.value">
+                {{view.viewValue}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <mat-form-field appearance="fill">
+            <mat-label>METER</mat-label>
+            <mat-select>
+            <mat-option *ngFor="let meter of meters" [value]="meter.value">
+                {{meter.viewValue}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="33.33" style="text-align:center; font-weight: bold;">
+        <span>ENERGY: </span><span style="color:red">156,610 kWh</span>
+    </mat-card>
+    <mat-card fxFlex="33.33" style="text-align:center; font-weight: bold;">
+        <span>LAST UPDATED: </span><span style="color:red">22/06/2021 12:07PM</span>
+    </mat-card>
+    <mat-card fxFlex="33.33" style="text-align:center; font-weight: bold;">
+        <span>NEXT HOUR PREDICTION ENERGY: </span><span style="color:red">157,393.05 kWh</span>
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div>
+    <app-widget-line></app-widget-line>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<div>
+    <div>gauge</div>
+    <div>gauge</div>
+</div>

@@ -13,6 +13,9 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { LineComponent } from './widgets/line/line.component';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { GaugeComponent } from './widgets/gauge/gauge.component';
+import { ChartModule } from 'angular-highcharts';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     FooterComponent,
     SidebarComponent,
     LineComponent,
+    GaugeComponent,
   ],
   imports: [
     CommonModule,
@@ -31,13 +35,16 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatMenuModule,
     MatListModule,
     RouterModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    ChartModule
+    
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
     LineComponent,
+    GaugeComponent
   ]
 })
 export class SharedModule { }

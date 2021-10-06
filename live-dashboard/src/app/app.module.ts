@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
+import { ChartModule } from 'angular-highcharts';
+import { NgxGaugeModule } from 'ngx-gauge';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { DefaultModule } from './layouts/default/default.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule
+    DefaultModule,
+    ChartModule,
+    NgxGaugeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

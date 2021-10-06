@@ -1,6 +1,7 @@
 <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
-    <mat-card fxFlex="25">
-        <mat-form-field appearance="fill">
+    <mat-card fxFlex="25" style="text-align: center;">
+        <span style="font-weight: bold;">FLOOR: </span>
+        <mat-form-field appearance="fill" style="text-align: center;">
             <mat-label>FLOOR</mat-label>
             <mat-select>
             <mat-option *ngFor="let floor of floors" [value]="floor.value">
@@ -9,8 +10,9 @@
             </mat-select>
         </mat-form-field>
     </mat-card>
-    <mat-card fxFlex="25">
-        <mat-form-field appearance="fill">
+    <mat-card fxFlex="25" style="text-align: center;">
+        <span style="font-weight: bold;">SECTION: </span>
+        <mat-form-field appearance="fill" style="text-align: center;">
             <mat-label>SECTION</mat-label>
             <mat-select>
             <mat-option *ngFor="let section of sections" [value]="section.value">
@@ -19,8 +21,9 @@
             </mat-select>
         </mat-form-field>
     </mat-card>
-    <mat-card fxFlex="25">
-        <mat-form-field appearance="fill">
+    <mat-card fxFlex="25" style="text-align: center;">
+        <span style="font-weight: bold;">VIEW: </span>
+        <mat-form-field appearance="fill" style="text-align: center;">
             <mat-label>VIEW</mat-label>
             <mat-select>
             <mat-option *ngFor="let view of views" [value]="view.value">
@@ -29,8 +32,9 @@
             </mat-select>
         </mat-form-field>
     </mat-card>
-    <mat-card fxFlex="25">
-        <mat-form-field appearance="fill">
+    <mat-card fxFlex="25" style="text-align: center;">
+        <span style="font-weight: bold;">METER: </span>
+        <mat-form-field appearance="fill" style="text-align: center;">
             <mat-label>METER</mat-label>
             <mat-select>
             <mat-option *ngFor="let meter of meters" [value]="meter.value">
@@ -65,15 +69,30 @@
 
 <br>
 
+<!-- <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="25">
+        <app-widget-gauge></app-widget-gauge>
+    </div>
+    <div fxFlex="25">
+        <app-widget-gauge></app-widget-gauge>
+    </div>
+    <div fxFlex="25">
+        <app-widget-gauge></app-widget-gauge>
+    </div>
+    <div fxFlex="25">
+        <app-widget-gauge></app-widget-gauge>
+    </div>
+</div> -->
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
 <div>
     <app-widget-line></app-widget-line>
 </div>
 
 <br>
 
-<mat-divider></mat-divider>
-
-<div>
-    <div>gauge</div>
-    <div>gauge</div>
-</div>
